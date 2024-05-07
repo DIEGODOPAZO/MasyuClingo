@@ -56,9 +56,10 @@ circle((X/n,X\n)) :- white(X).
 :- circle(X), not used(X).
 
 %Formar un bucle unico sin que se crucen las lineas.
-reach (Y) :- edge (_, Y).
-reach (Z) :- edge (Y, Z), reach(Y).
-:- used (P), not reach (P).
+reach (X, Y) :- edge (X, Y).
+reach (X, Z) :- edge (Y, Z), reach(X, Y).
+
+:-circle(X), used(P), not reach(X, P), X!=P.
 
 %Condiciones de blancos y negros
 %Los blancos son atravesados rectos y tiene uno o dos giros después

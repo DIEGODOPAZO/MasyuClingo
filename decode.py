@@ -9,6 +9,7 @@ if len(sys.argv)<2:
 
 # Loading files and grounding
 ctl = clingo.Control()
+ctl.add("base", [], "size(n).")
 for arg in sys.argv[1:]:
     ctl.load(arg)
 ctl.ground([("base", [])])

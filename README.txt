@@ -15,18 +15,18 @@ Todos los puzzles en masyu-examples.zip tienen una solución (clingo 0 masyuKB.l
 Pasos para ejecutar el código:
 
 1.- Obtenemos los facts con encode.py y el enunciado (masyuXX.txt) y lo guardamos en masyuXX.lp.
-
+```sh
 python3 encode.py masyu-examples/masyu02.txt masyu02.lp
-
+```
 2.- Guardamos la salida del solver, masyuKB.lp para un archivo .lp con los facts. Usamos decode.py y la salida 
 la podemos guardar en un archivo como puede ser solutionXX.txt.
-
+```sh
 python3 decode.py masyuKB.lp masyu02.lp > solution02.txt
-
+```
 3.- Imprimimos por pantalla el resultado que se obtiene al resolver el puzzle.
-
+```sh
 python3 display.py masyuKB.lp masyu02.lp drawmasyu.lp
-
+```
 
 
 (Se asume que las cuadriculas son de n x n y n >= 0)

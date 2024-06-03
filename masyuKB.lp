@@ -1,7 +1,7 @@
 %Victor Nathanael Badillo Aldama y Diego Dopazo Garcia
 row(0..n-1).
 col(0..n-1).
-point( (X,Y) ) :- row(X), col(Y).
+
 
 adj( (X,Y), (X,Y + 1)) :- row(X), col(Y), col(Y + 1). 
 adj( (X,Y), (X + 1,Y)) :- row(X), col(Y), row(X + 1). 
